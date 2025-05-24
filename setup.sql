@@ -32,9 +32,16 @@ CREATE TABLE IF NOT EXISTS student_info (
 
 -- 2. doc_uploaded table
 CREATE TABLE IF NOT EXISTS doc_uploaded (
-    INSERT INTO doc_uploaded (application_id, form_137, form_138, birth_certificate, good_moral, med_certificate, id_photos, recommendation_letter, uploaded, uploaded_at) 
-VALUES
-(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    application_id VARCHAR(255),
+    form_137 VARCHAR(255),
+    form_138 VARCHAR(255),
+    birth_certificate VARCHAR(255),
+    good_moral VARCHAR(255),
+    med_certificate VARCHAR(255),
+    id_photos VARCHAR(255),
+    recommendation_letter VARCHAR(255),
+    uploaded INT,
+    uploaded_at TIMESTAMP
 );
 
 -- 3. payments table
