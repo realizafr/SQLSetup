@@ -32,12 +32,9 @@ CREATE TABLE IF NOT EXISTS student_info (
 
 -- 2. doc_uploaded table
 CREATE TABLE IF NOT EXISTS doc_uploaded (
-    doc_id INT AUTO_INCREMENT PRIMARY KEY,
-    application_id VARCHAR(255) NOT NULL,
-    doc_name VARCHAR(255) NOT NULL,
-    doc_type VARCHAR(100),
-    file_path VARCHAR(500),
-    CONSTRAINT fk_doc_application FOREIGN KEY (application_id) REFERENCES student_info(application_id) ON DELETE CASCADE
+    INSERT INTO doc_uploaded (application_id, form_137, form_138, birth_certificate, good_moral, med_certificate, id_photos, recommendation_letter, uploaded, uploaded_at) 
+VALUES
+(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 );
 
 -- 3. payments table
